@@ -1,0 +1,10 @@
+.ant-input-affix-wrapper,
+.ant-input,
+.ant-input-affix-wrapper input {
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,28 @@
+.ant-checkbox {
+  &-inner {
+    border: 1px solid rgba(38, 38, 38, 0.3);
+    border-radius: 2px;
+    background: $color_white;
+  }
+
+  &-wrapper:hover .ant-checkbox-inner,
+  &:hover .ant-checkbox-inner,
+  &-input:focus + .ant-checkbox-inner {
+    border-color: $color_gray_16;
+  }
+
+  &-checked {
+    .ant-checkbox-inner {
+      background: $color_white;
+      border-color: $color_gray_16;
+
+      &::after {
+        border-color: #5f8afa;
+      }
+    }
+  }
+
+  &-checked::after {
+    border-color: $color_gray_16;
+  }
+}

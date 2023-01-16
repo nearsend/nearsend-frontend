@@ -1,0 +1,5 @@
+testaddress01.testnet,0.001
+testaddress02.testnet,1
+testaddress03.testnet,3.45
+testaddress04.testnet,2.1
+testaddress05.testnet,1.5

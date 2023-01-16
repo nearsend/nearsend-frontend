@@ -1,0 +1,54 @@
+.ant-tabs {
+  overflow: inherit;
+  &-tab {
+    padding: 15px 0;
+
+    + .ant-tabs-tab {
+      margin: 0 0 0 32px;
+    }
+  }
+
+  &-tab-btn {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: $color_gray_11;
+    z-index: 1;
+  }
+
+  &-tab-btn:focus,
+  &-tab-remove:focus,
+  &-tab-btn:active,
+  &-tab-remove:active {
+    color: $color_primary;
+  }
+
+  &-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: $color_primary;
+  }
+
+  &-top > .ant-tabs-nav,
+  &-bottom > .ant-tabs-nav,
+  &-top > div > .ant-tabs-nav,
+  &-bottom > div > .ant-tabs-nav {
+    margin-bottom: 35px;
+
+    @media (max-width: $breakpoint_tablet_max) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &-top > .ant-tabs-nav::before,
+  &-bottom > .ant-tabs-nav::before,
+  &-top > div > .ant-tabs-nav::before,
+  &-bottom > div > .ant-tabs-nav::before {
+    border-bottom: 1px solid $color_blue_2;
+  }
+
+  &-top > .ant-tabs-nav .ant-tabs-ink-bar,
+  &-bottom > .ant-tabs-nav .ant-tabs-ink-bar,
+  &-top > div > .ant-tabs-nav .ant-tabs-ink-bar,
+  &-bottom > div > .ant-tabs-nav .ant-tabs-ink-bar {
+    background: $color_blue;
+  }
+}

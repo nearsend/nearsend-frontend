@@ -1,0 +1,316 @@
+.prepare {
+  position: relative;
+
+  p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 15px;
+    color: $color_black_4;
+  }
+
+  &__wrapper {
+    width: 732px;
+    font-weight: 700;
+    @media (max-width: $breakpoint_mobile_max) {
+      width: 100%;
+    }
+  }
+
+  &__form__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    @media (max-width: $breakpoint_tablet_max) {
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+    }
+
+    &--address {
+      flex-direction: column;
+      width: 550px;
+      position: relative;
+      @media (max-width: $breakpoint_tablet_max) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__address {
+    &__input {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 45px !important;
+      height: fit-content;
+      background: $color_white;
+      gap: 10px;
+      border-radius: 2px;
+
+      svg {
+        vertical-align: middle;
+        cursor: pointer;
+        width: 16px;
+        height: 16px;
+
+        path {
+          fill: $color_gray_16;
+        }
+      }
+
+      .ant-select-single.ant-select-show-arrow .ant-select-selection-item,
+      .ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder {
+        padding-right: 50px;
+      }
+
+      .ant-select-show-search.ant-select:not(.ant-select-customize-input) .ant-select-selector input {
+        color: $color_gray_16;
+        padding: 12px 14px;
+
+        &::placeholder {
+          color: $color_placeholder;
+        }
+      }
+
+      .form-item {
+        width: 100%;
+
+        .ant-select-wrapper {
+          max-height: 45px;
+        }
+
+        .ant-select-selector {
+          border: 1px solid $color_gray_16;
+        }
+
+        .ant-select-selection-search {
+          height: 100%;
+          left: 0;
+        }
+
+        .ant-select-selection-item {
+          color: $color_gray_16;
+          display: flex;
+          align-items: center;
+        }
+
+        .ant-select-item-option-selected {
+          background-color: $color_gray_17;
+        }
+
+        .ant-select-item {
+          padding: 0;
+          :hover {
+            background-color: $color_gray_9;
+          }
+        }
+      }
+
+      &--error {
+        .form-item {
+          .ant-select-selector {
+            border-color: $color_red_2;
+          }
+        }
+      }
+    }
+
+    &__dropdown {
+      .ant-select-item {
+        border-bottom-color: rgba($color: $color_black_4, $alpha: 0.3) !important;
+      }
+
+      background: $color_white;
+      padding: 10px;
+      min-width: 516px !important;
+      border-radius: 0;
+      box-shadow: 4px 4px 40px $color_box_shadow;
+      border-radius: 2px;
+
+      @media (max-width: $breakpoint_mobile_max) {
+        min-width: 200px !important;
+        width: 100% !important;
+        left: 0px !important;
+      }
+
+      .option-render__wrapper {
+        padding: 14px;
+      }
+
+      .option-render__token {
+        display: block;
+      }
+
+      .option-render__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .option-render__balance {
+        display: block;
+      }
+
+      .option-render__title {
+        margin-bottom: 8px;
+      }
+
+      .option-render__address {
+        font-size: 12px;
+
+        &::after {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__decimals {
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    @media only screen and (max-width: $breakpoint_tablet_max) {
+      order: 2;
+    }
+
+    &--number {
+      display: flex;
+      justify-content: stretch;
+      align-items: center;
+      background: $color_gray_20;
+      span:first-child {
+        height: 45px;
+        padding: 12px 14px;
+        border: 1px solid $color_gray_16;
+        width: 100%;
+        margin-right: -30px;
+        border-radius: 2px;
+      }
+    }
+  }
+
+  &__balance {
+    color: $color_gray_16;
+    line-height: normal;
+    margin: 20px 0 12px 0;
+    font-weight: 500;
+    max-width: 70%;
+
+    &--bold {
+      font-weight: 700;
+      color: $color_black_4;
+    }
+  }
+
+  &__upload {
+    display: flex;
+    align-items: center;
+    gap: 10;
+    cursor: pointer;
+    user-select: none;
+    color: $color_blue_3;
+    font-size: 14px;
+
+    .ant-space {
+      svg {
+        vertical-align: sub;
+      }
+    }
+  }
+
+  &__dragger {
+    min-height: 212px;
+    border: 1px solid $color_gray_16;
+    padding: 6px;
+    display: flex;
+    justify-content: stretch;
+    border-radius: 2px;
+
+    .ant-upload.ant-upload-drag {
+      background: transparent;
+
+      p {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        color: $color_gray_16;
+        margin-top: 18px;
+      }
+
+      :not(.ant-upload-disabled):hover {
+        border-color: $color_blue_3;
+
+        svg path {
+          fill: $color_blue_3;
+          fill-opacity: 1;
+        }
+
+        p {
+          color: $color_black_4;
+        }
+      }
+    }
+
+    span {
+      width: 100%;
+    }
+
+    &__icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__instruction {
+    margin-top: 12px;
+
+    &__text {
+      font-weight: 400;
+      font-size: 12px;
+    }
+
+    a {
+      font-size: 14px;
+      color: $color_blue_3;
+    }
+  }
+
+  &__button {
+    margin-top: 32px;
+  }
+
+  &__clear-input {
+    cursor: pointer;
+  }
+
+  //override
+  .form-item__label {
+    color: $color_black;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 20px;
+    @media (max-width: $breakpoint_mobile_max) {
+      font-size: 16px;
+      font-weight: 700;
+      color: $color_black_4;
+    }
+  }
+
+  .ant-input {
+    border-radius: 0;
+    color: $color_black_4;
+  }
+
+  .form-item {
+    margin-bottom: 0;
+
+    input {
+      padding: 0;
+      font-size: 14px;
+    }
+  }
+}

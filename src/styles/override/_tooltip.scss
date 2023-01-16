@@ -1,0 +1,56 @@
+.ant-tooltip {
+  &-arrow {
+    display: none;
+  }
+
+  &-inner {
+    background: $color_white;
+    box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    padding: 8px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: $color_black_4;
+
+    h5.ant-typography {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 30px;
+      color: $color_black_4;
+      margin-bottom: 18px;
+    }
+
+    .icon-close {
+      position: absolute;
+      right: 32px;
+      cursor: pointer;
+      svg {
+        width: 28px;
+        path {
+          fill: $color_gray_16;
+        }
+      }
+    }
+  }
+}
+
+.tooltip-status {
+  max-width: 500px;
+
+  .ant-tooltip-inner {
+    border-radius: 16px;
+    padding: 32px;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  h5 + .ant-space {
+    margin-bottom: 12px;
+  }
+
+  @media (max-width: $breakpoint_mobile_max) {
+    max-width: 360px;
+    width: 100%;
+  }
+}

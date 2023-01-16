@@ -1,0 +1,115 @@
+.profile {
+  padding: 10px 34px;
+  border-radius: 28px;
+  cursor: pointer;
+  background: $color_black_4;
+
+  & ~ div .ant-dropdown {
+    padding-top: 16px;
+  }
+
+  &_mobile {
+    display: none;
+  }
+
+  & + div .ant-typography,
+  .ant-typography {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: $color_white;
+  }
+
+  &__address {
+    display: flex;
+    align-items: center;
+    margin: 0 -6px 36px;
+
+    > div {
+      padding: 0 6px;
+    }
+    .ant-typography {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__dropdown {
+    background: rgba($color: #ffffff, $alpha: 0.64);
+    backdrop-filter: blur(8px);
+    padding: 24px 32px 32px;
+    min-width: 300px;
+    box-shadow: none;
+    border: 1px solid $color_black_4;
+
+    .profile__connect {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 36px;
+
+      .ant-typography {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: $color_gray_16;
+      }
+
+      svg {
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+
+        path {
+          fill: #676767;
+        }
+      }
+    }
+
+    .ant-typography {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      color: $color_black_4;
+    }
+
+    .ant-btn {
+      width: 100%;
+    }
+
+    .ant-dropdown-menu-item:hover,
+    .ant-dropdown-menu-submenu-title:hover,
+    .ant-dropdown-menu-item.ant-dropdown-menu-item-active,
+    .ant-dropdown-menu-item.ant-dropdown-menu-submenu-title-active,
+    .ant-dropdown-menu-submenu-title.ant-dropdown-menu-item-active,
+    .ant-dropdown-menu-submenu-title.ant-dropdown-menu-submenu-title-active {
+      background: transparent;
+    }
+
+    > li,
+    &.ant-menu-vertical > .ant-menu-item,
+    &.ant-menu-vertical-left > .ant-menu-item,
+    &.ant-menu-vertical-right > .ant-menu-item,
+    &.ant-menu-inline > .ant-menu-item,
+    &.ant-menu-vertical > .ant-menu-submenu > .ant-menu-submenu-title,
+    &.ant-menu-vertical-left > .ant-menu-submenu > .ant-menu-submenu-title,
+    &.ant-menu-vertical-right > .ant-menu-submenu > .ant-menu-submenu-title,
+    &.ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title {
+      padding: 8px 0;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+      color: $color_gray_12;
+      margin: 0;
+      height: fit-content;
+
+      &:last-of-type {
+        padding-bottom: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+div.ant-typography,
+h1.ant-typography,
+h2.ant-typography,
+h3.ant-typography,
+h4.ant-typography,
+h5.ant-typography,
+.ant-typography p {
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 15px;
+  color: $color_black_4;
+}
+
+.ant-typography {
+  .ant-typography-copy {
+    svg {
+      vertical-align: sub;
+    }
+  }
+}
+
+h1.ant-typography {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 60px;
+  margin-bottom: 24px;
+
+  @media (max-width: $breakpoint_desktop_max) {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+html[lang='ja-jp'] {
+  h1.ant-typography {
+    @media (max-width: $breakpoint_desktop_max) {
+      font-size: 22px;
+    }
+  }
+}
+
+h2.ant-typography {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 12px;
+}
+
+.typography-wrapper {
+  display: flex;
+  align-items: center;
+
+  svg {
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+  }
+}

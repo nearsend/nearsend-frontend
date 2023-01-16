@@ -1,0 +1,132 @@
+.language-select {
+  position: fixed;
+  right: 36px;
+  bottom: 36px;
+  cursor: pointer;
+
+  .mobile {
+    display: none;
+    cursor: pointer;
+  }
+
+  .button {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: $color_primary;
+
+    &:hover {
+      color: $color_white;
+    }
+  }
+
+  .ant-image {
+    border-radius: 50% 50% 0 50%;
+
+    &:hover {
+      box-shadow: 0px 0px 20px rgba(190, 143, 48, 0.9);
+    }
+  }
+
+  .ant-popover {
+    &-inner {
+      width: auto;
+      background: transparent;
+      box-shadow: none;
+
+      &-content {
+        padding: 0;
+      }
+
+      .ant-space-item div {
+        cursor: pointer;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+        color: $color_black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $color_primary;
+        transition: all 0.5s linear;
+        font-style: italic;
+
+        &:hover,
+        &.active {
+          box-shadow: 0px 0px 20px rgba(190, 143, 48, 0.9);
+          color: $color_white;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint_tablet_max) {
+    right: 0;
+    bottom: 0;
+    padding: 7px 16px;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #000000 50.55%, rgba(0, 0, 0, 0) 100%);
+
+    .desktop {
+      display: none;
+    }
+
+    .mobile {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .ant-drawer {
+      height: auto;
+      bottom: 0;
+      top: auto;
+      bottom: 50px;
+
+      &-right.ant-drawer-open &-content-wrapper {
+        box-shadow: none;
+      }
+
+      &-header {
+        display: none;
+      }
+
+      &-content {
+        background: transparent;
+      }
+
+      &-body {
+        padding: 0;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 16px 0px 0px 16px;
+
+        > div {
+          padding: 3px 21px;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 18px;
+          color: $color_primary;
+          text-align: left;
+
+          &:not(:last-of-type) {
+            border-bottom: 1px solid $color_primary;
+          }
+
+          &.active {
+            background: $color_primary;
+            color: $color_white;
+          }
+        }
+      }
+
+      &-content {
+        &-wrapper {
+          position: relative;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.ant-message {
+  &-notice-content {
+    box-shadow: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    padding: 0;
+
+    .ant-message {
+      &-custom-content {
+        padding: 16px;
+        border-radius: 8px;
+      }
+
+      &-success {
+        color: $color_black_4;
+        background: $color_white;
+      }
+
+      &-error {
+        color: $color_white;
+        background: rgba($color: $color_red, $alpha: 0.8);
+
+        .anticon {
+          svg path {
+            fill: $color_white;
+          }
+        }
+      }
+    }
+  }
+}

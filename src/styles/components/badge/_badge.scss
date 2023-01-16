@@ -1,0 +1,136 @@
+.badge-notify {
+  margin-right: 16px;
+  position: relative;
+  cursor: pointer;
+  background: $color_primary;
+  border: 1px solid $color_blue_2;
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .ant-badge-count {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 12px;
+    color: $color_white;
+    background: $color_primary;
+    padding: 3px 4px;
+    border-radius: 10px;
+    min-width: 18px;
+    text-align: center;
+    border: none;
+    box-shadow: none;
+
+    .ant-scroll-number-only {
+      height: auto;
+      vertical-align: middle;
+    }
+  }
+
+  & ~ div .ant-popover {
+    &-inner {
+      width: 489px;
+      border-radius: 12px;
+      background: $color_gray_13;
+
+      .icon-close {
+        display: none;
+
+        @media (max-width: $breakpoint_mobile_max) {
+          display: block;
+          width: 32px;
+          height: 32px;
+          top: 14px;
+          right: 18px;
+        }
+      }
+
+      @media (max-width: $breakpoint_mobile_max) {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+        background: $color_black;
+        position: fixed;
+      }
+
+      &-content {
+        padding: 28px 32px;
+
+        @media (max-width: $breakpoint_mobile_max) {
+          height: 100%;
+          padding: 17px 16px;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      h5.ant-typography {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 26px;
+        color: $color_blue_1;
+      }
+
+      .list-notification {
+        margin-top: 8px;
+        max-height: 278px;
+        overflow: auto;
+
+        @include scrollbars();
+
+        @media (max-width: $breakpoint_mobile_max) {
+          flex: 0 1 100%;
+          max-height: none;
+        }
+
+        .notify-item-wrap {
+          padding: 8px 16px 8px 48px;
+          position: relative;
+          cursor: pointer;
+
+          &:hover {
+            background: $color_black_2;
+          }
+
+          &.has-read {
+            &::after {
+              content: '';
+              width: 7px;
+              height: 7px;
+              border-radius: 50%;
+              background: $color_primary;
+              position: absolute;
+              top: 50%;
+              left: 16px;
+              transform: translateY(-50%);
+            }
+          }
+        }
+
+        .text-notify {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 21px;
+          color: $color_gray_12;
+          -webkit-line-clamp: 2;
+
+          div {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+            white-space: nowrap;
+          }
+        }
+        .text-created {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 18px;
+          color: $color_gray_11;
+        }
+      }
+    }
+  }
+}

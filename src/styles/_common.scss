@@ -1,0 +1,123 @@
+html,
+body {
+  font-size: 14px;
+  background: $color_white;
+  line-height: 1;
+
+  @include scrollbars();
+
+  #root {
+    height: 100%;
+
+    .App {
+      height: 100%;
+    }
+  }
+}
+
+html body {
+  font-family: $font-main, sans-serif;
+}
+
+#root > div {
+  height: 100%;
+
+  .ant-spin-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+#main-body {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+a,
+a.ant-typography,
+.ant-typography a {
+  color: $color_blue_3;
+
+  &:hover {
+    opacity: 0.8;
+    color: $color_blue_3;
+    text-decoration: underline;
+  }
+
+  .ant-image {
+    margin-left: 8px;
+  }
+}
+
+.text-highlight {
+  color: $color_blue;
+}
+
+.error-message {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba($color: $color_red, $alpha: 0.08);
+  border-radius: 2px;
+  padding: 12px;
+  width: 100%;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: $color_red;
+}
+
+.layer {
+  height: calc(100% - 80px);
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-top: 80px;
+  overflow: hidden;
+  pointer-events: none;
+
+  @media (max-width: $breakpoint_mobile_max) {
+    margin-top: 0px;
+    height: 100%;
+  }
+
+  > div {
+    position: absolute;
+    height: 10rem;
+    width: 20rem;
+    transform: rotate(15deg);
+    border-radius: 9999px;
+    opacity: 0.2;
+    filter: blur(64px);
+
+    &:nth-child(1) {
+      background-image: linear-gradient(to right, #e3935b 10%, #e3935b 90%);
+      top: -5vw;
+      left: 20vw;
+    }
+    &:nth-child(2) {
+      background-image: linear-gradient(to right, #5f8afa 10%, #5f8afa 90%);
+      top: 0;
+      right: -5vw;
+      transform: rotate(30deg);
+    }
+    &:nth-child(3) {
+      background-image: linear-gradient(to right, #db5555 10%, #e3935b 90%);
+      bottom: -5vw;
+      left: 40vw;
+      @media (max-width: $breakpoint_mobile_max) {
+        display: none;
+      }
+    }
+  }
+}

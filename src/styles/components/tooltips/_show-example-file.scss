@@ -1,0 +1,60 @@
+.show-example-file {
+  max-width: none;
+  @media (max-width: $breakpoint_mobile_max) {
+    width: 100%;
+  }
+
+  .ant-tooltip {
+    padding: 0;
+
+    &-inner {
+      border-radius: 16px;
+      padding: 32px;
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  .ant-tooltip-content {
+    min-width: 516px;
+
+    @media (max-width: $breakpoint_mobile_max) {
+      min-width: auto;
+      width: 90%;
+      margin: auto;
+    }
+  }
+
+  &__title {
+    color: $color_black_4;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    margin-bottom: 18px;
+
+    @media (max-width: $breakpoint_mobile_max) {
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+
+  &__example {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 12px;
+
+    a {
+      color: $color_blue_3;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+
+      svg {
+        margin-right: 8px;
+        vertical-align: middle;
+      }
+    }
+  }
+}

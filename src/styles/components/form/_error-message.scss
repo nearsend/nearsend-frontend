@@ -1,0 +1,42 @@
+.error-message {
+  &__wrapper {
+    flex-grow: 1;
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    @media only screen and (max-width: $breakpoint_tablet_max) {
+      order: 1;
+      width: 100%;
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+  &__content {
+    background-color: rgba($color: $color_red, $alpha: 0.08);
+    padding: 12px;
+    color: $color_red;
+    font-weight: 400;
+    font-size: 14px;
+    flex-grow: 1;
+    display: flex;
+    gap: 8px;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: -100px;
+
+    @media only screen and (max-width: $breakpoint_mobile_max) {
+      align-items: flex-start;
+
+      & span[role=img]{
+        margin-top: 4px;
+      }
+    }
+  }
+
+  &__action {
+    @media only screen and (max-width: $breakpoint_tablet_max) {
+      margin: 12px 0 8px;
+      display: block;
+    }
+  }
+}

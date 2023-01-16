@@ -1,0 +1,127 @@
+.mobile-drawer {
+  .ant-drawer-wrapper-body {
+    .ant-drawer-header {
+      display: none;
+    }
+
+    .ant-drawer-body {
+      padding: 0px;
+
+      @media (max-width: $breakpoint_mobile_max) {
+        flex-direction: column;
+        display: flex;
+      }
+
+      .drawer {
+        &__header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 10px 15px;
+          height: 44px;
+        }
+
+        &__content {
+          background-color: $color_gray_19;
+          &--tutorial {
+            display: flex;
+            align-items: center;
+            height: 50px;
+            margin-top: 20px;
+            padding: 0px 30px 0px 15px;
+            justify-content: space-between;
+            h1 {
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 30px;
+              display: block;
+              color: $color_black_4;
+              margin: 0px 0px;
+            }
+          }
+
+          &--address {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            margin-left: 15px;
+            margin-right: 20px;
+            font-size: 18px;
+            color: $color_black_4;
+            .ant-image {
+              width: 16px;
+              margin-right: 10px;
+            }
+
+            .ant-typography {
+              align-items: center;
+              display: flex;
+              justify-content: space-between;
+              width: 100%;
+              font-weight: 400;
+            }
+
+            .ant-typography,
+            a {
+              svg {
+                width: 13.5px;
+                vertical-align: sub;
+              }
+            }
+          }
+
+          &--button {
+            display: flex;
+            flex-direction: column;
+            padding: 0px 15px;
+            button {
+              padding: 10px 14px;
+              margin-bottom: 25px;
+              font-size: 16px !important;
+              font-weight: 700 !important;
+            }
+
+            .button--secondary {
+              color: $color_black_4;
+            }
+          }
+
+          &--back {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            font-size: 18px;
+            svg {
+              margin-left: 18px;
+            }
+          }
+
+          .line {
+            height: 2px;
+            width: 36px;
+            margin-left: 15px;
+            margin-top: 20px;
+            background-color: rgba(38, 38, 38, 0.3);
+          }
+
+          .networks {
+            margin-top: 25px;
+            padding: 0px 15px;
+            .network-item {
+              display: flex;
+              align-items: center;
+              font-size: 18px;
+              font-weight: 400;
+              margin-top: 20px;
+              img {
+                width: 16px;
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

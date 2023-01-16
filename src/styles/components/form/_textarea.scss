@@ -1,0 +1,73 @@
+.auto-line-textarea {
+  &__wrapper {
+    width: 100%;
+    border: 1px solid $color_gray_16;
+    height: 212px;
+    overflow-y: auto;
+    border-radius: 2px;
+
+    &:hover,
+    &--focusing {
+      border-color: $color_blue_3;
+    }
+
+    &--error {
+      border-color: $color_red;
+    }
+
+    @include scrollbars();
+
+    &--child {
+      display: flex;
+      width: 100%;
+      padding: 14px;
+      padding-bottom: 0;
+      gap: 24px;
+      background: $color_white;
+
+      .form-item {
+        width: 100%;
+
+        .text-area {
+          height: 100%;
+        }
+
+        textarea {
+          border: none;
+          padding: 0;
+          min-height: 184px;
+          height: 100%;
+          font-weight: 400;
+          line-height: 32px;
+          overflow-x: auto;
+          overflow-y: hidden;
+          resize: none;
+          white-space: pre;
+          @include scrollbars();
+        }
+      }
+    }
+  }
+
+  &__lines {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 14px;
+    max-width: 212px;
+    line-height: 32px;
+    p {
+      margin-bottom: 0;
+    }
+
+    &--error {
+      color: $color_red !important;
+    }
+  }
+
+  &__dash {
+    font-weight: 400;
+    color: $color_blue_3;
+  }
+}

@@ -1,0 +1,13 @@
+.ant-progress {
+  line-height: 1;
+
+  &-inner {
+    background: $color_gray_17;
+    border-radius: 0;
+  }
+
+  &-bg {
+    border-radius: 0;
+    background: linear-gradient(93.76deg, #6b6ef9 -2.18%, #4fd1d9 101.91%);
+  }
+}

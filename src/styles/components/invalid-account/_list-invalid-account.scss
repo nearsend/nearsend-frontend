@@ -1,0 +1,47 @@
+.list-invalid-account {
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  border: 1px solid $color_red;
+  gap: 16px;
+  color: $color_red;
+  margin-top: 12px;
+  font-weight: 400;
+  max-height: 204px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  @include scrollbars();
+
+  &__item {
+    display: flex;
+    svg {
+      margin-left: 10px;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+  }
+
+  &__line {
+    white-space: nowrap;
+  }
+
+  &__error {
+    font-weight: 700;
+    margin-left: 8px;
+    white-space: normal;
+    margin-right: auto;
+    word-break: break-word;
+  }
+
+  &__btn {
+    background-color: transparent !important;
+    border: none;
+    padding: 0;
+    border-bottom: 1px solid $color_red !important;
+    outline: none;
+    color: $color_red !important;
+    justify-self: flex-end;
+    box-shadow: none;
+    height: fit-content;
+  }
+}

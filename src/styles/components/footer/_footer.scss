@@ -1,0 +1,38 @@
+footer {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: $color_gray_4;
+  padding: 36px 0;
+
+  .container {
+    @media (max-width: $breakpoint_mobile_max) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    > div:not(:first-of-type) {
+      margin-top: 16px;
+    }
+
+    .ant-typography {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 15px;
+      color: $color_gray_16;
+
+      @media (max-width: $breakpoint_mobile_max) {
+        font-size: 12px;
+      }
+    }
+
+    a {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 15px;
+      color: $color_blue_3;
+      margin-left: 8px;
+      display: inline;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+// size screen responsive
+// Small devices (landscape phones, 576px and up)
+// Extra large devices (large desktops, 1200px and up)
+// Large devices (desktops, 992px and up)
+// Medium devices (tablets, 768px and up)
+$breakpoint_mobile_max: 575px;
+$breakpoint_tablet_max: 767px;
+$breakpoint_desktop_max: 991px;
+$breakpoint_large_desktop_max: 1199px;
+$breakpoint_ultra_desktop_max: 1600px;
+$breakpoint_ultra_large_desktop_max: 1921px;
+
+//color
+$color_primary: #262626;
+$color_black: #000000;
+$color_black_2: #141416;
+$color_black_3: #323134;
+$color_black_4: #262626;
+$color_white: #ffffff;
+$color_gray: #dcd4d1;
+$color_gray_2: #b1b1b1;
+$color_gray_3: #393939;
+$color_gray_4: #b9b5b4;
+$color_gray_5: #282828;
+$color_gray_6: #696969;
+$color_gray_7: #4d4d4e;
+$color_gray_8: #c4c4c4;
+$color_gray_9: #d0d0d0;
+$color_gray_10: #a4a5af;
+$color_gray_11: rgba(225, 226, 233, 0.5);
+$color_gray_12: #e1e2e9;
+$color_gray_13: #1c2023;
+$color_gray_14: #6c6d76;
+$color_gray_15: #fcfcfc;
+$color_gray_16: #676767;
+$color_gray_17: #f5f6f2;
+$color_gray_18: #605f5f;
+$color_gray_19: #dedede;
+$color_gray_20: #eeeeee;
+$color_red: #ff0000;
+$color_red_2: #ff6060;
+$color_green: #00d964;
+$color_green_2: #02a34c;
+$color_blue: #1890ff;
+$color_blue_1: #8089a9;
+$color_blue_2: #2e303e;
+$color_blue_3: #5f8afa;
+$color_brown: #5f3824;
+$color_yellow: #f8bf1e;
+$color_yellow_2: #dba91b;
+$color_bg_input: transparent;
+$color_placeholder: rgba(38, 38, 38, 0.3);
+$color_popup_linear: linear-gradient(180deg, #24242d 0%, #0f0f13 100%);
+$color_box_shadow: rgba(0, 0, 0, 0.08);
+$color_background_token_logo: linear-gradient(
+  140.14deg,
+  #fefefe -15.75%,
+  #fafafb 6.02%,
+  #f0f0f0 25.4%,
+  #dddede 43.88%,
+  #c4c4c5 61.8%,
+  #a3a3a4 79.32%,
+  #7b7c7d 96.29%,
+  #58595b 108.94%
+);
+
+// font
+$font-main: 'Manrope';
+
+// size
+$width-home: 504px;
+$table_border_radius: 2px;
