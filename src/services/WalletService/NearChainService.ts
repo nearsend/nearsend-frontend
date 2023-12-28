@@ -458,16 +458,17 @@ export default class NearChainService extends BaseWalletService {
     try {
       // const serviceFeePromise = await this.readBlockchainData(library, getContractId(library), 'service_fee');
       // const serviceFee = this.parseData(serviceFeePromise?.result);
-      const serviceFeeExchangeResponse = await axios.get(
-        `${import.meta.env.VITE_COIN_GECKO_API}/price?ids=${['near']}&vs_currencies=usd`,
-      );
+      // const serviceFeeExchangeResponse = await axios.get(
+      //  `${import.meta.env.VITE_COIN_GECKO_API}/price?ids=${['near']}&vs_currencies=usd`,
+      // );
 
       return (
         formatNearAmount(
           convertPrice(
             divideNumber(
               convertToBigNumber(import.meta.env.VITE_SERVICE_FEE_USD_PER_ACCOUNT || 0),
-              serviceFeeExchangeResponse.data?.['near']?.usd,
+              // serviceFeeExchangeResponse.data?.['near']?.usd,
+              '1.29' // TEMP HACK
             ),
             NATIVE_TOKEN_DECIMAL_SCALE,
           ).toString(),
