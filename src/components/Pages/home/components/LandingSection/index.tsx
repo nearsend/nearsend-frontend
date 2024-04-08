@@ -34,10 +34,6 @@ const LandingSection: FC<{ isConnecting: boolean; isMinimize: boolean }> = ({ is
               <a href="https://near.org/" target="_blank" rel="noreferrer">
                 <Logo />
               </a>{' '}
-              +{' '}
-              <a href="https://invoker.lol/" target="_blank" rel="noreferrer">
-                <InvokerLab />
-              </a>
             </div>
 
             {!isConnecting && (
